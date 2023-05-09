@@ -9,11 +9,16 @@ import pycro.usts.util.FuncUtil;
  */
 public class Fibonacci {
     public static void main(String[] args) {
-        FuncUtil.timeConsumer(Fibonacci::fib1, 50);//该方法耗时：0.328s
+        //FuncUtil.timeConsumer(Fibonacci::fib1, 50);//该方法耗时：0.328s
+        FuncUtil.timeConsumer(Fibonacci::testArgs, new int[]{1, 1, 12000});
         /* long start = System.currentTimeMillis();
         System.out.print(fib2(1, 1, 40));
         long end = System.currentTimeMillis();
         System.out.printf("该方法耗时：%.3fs\n", (double) (end - start) / 1000); */
+    }
+
+    static void testArgs(int[] args) {
+        System.out.println(fib2(args[0], args[1], args[2]));
     }
 
     static int fib1(int n) {//O(n^2)
