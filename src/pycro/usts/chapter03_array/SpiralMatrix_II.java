@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author Pycro
  * @version 1.0
  * 2023-05-09 10:48 AM
+ * Leetcode：59
  */
 public class SpiralMatrix_II {
     public static void main(String[] args) {
@@ -105,4 +106,3 @@ public class SpiralMatrix_II {
         }
     }
 }
-

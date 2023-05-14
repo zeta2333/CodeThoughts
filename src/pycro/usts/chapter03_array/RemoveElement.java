@@ -4,6 +4,7 @@ package pycro.usts.chapter03_array;
  * @author Pycro
  * @version 1.0
  * 2023-05-08 9:55 PM
+ * leetcode：27
  */
 public class RemoveElement {
     // 思路：遇到不等于val的元素就放置到前面，直接从前往后覆盖，相当于直接无视掉val值元素  O(n)
