@@ -4,6 +4,7 @@ package pycro.usts.chapter04_linkedlist;
  * @author Pycro
  * @version 1.0
  * 2023-05-18 5:09 PM
+ * Leetcode：19
  */
 public class RemoveNthNodeFromEndOfList {
     /**
