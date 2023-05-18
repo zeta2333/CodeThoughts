@@ -31,7 +31,6 @@ public class RemoveLinkedListElements {
             this.next = next;
         }
     }
-
     class Solution {
         public ListNode removeElements(ListNode head, int val) {
             // 虚拟头结点 virtual head

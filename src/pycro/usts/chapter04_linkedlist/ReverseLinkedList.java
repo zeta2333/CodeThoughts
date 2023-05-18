@@ -37,7 +37,7 @@ public class ReverseLinkedList {
 
     // 解法1：额外空间
     class Solution1 {
-        public  ListNode reverseList(ListNode head) {
+        public ListNode reverseList(ListNode head) {
             // 判断单节点和空节点直接返回
             if (head.next == null || head == null) return head;
             // 定义一个反转后的虚拟头结点
@@ -78,7 +78,8 @@ public class ReverseLinkedList {
         public ListNode reverseList(ListNode head) {
             return reverse(null, head);
         }
-        ListNode reverse(ListNode pre, ListNode cur){
+
+        ListNode reverse(ListNode pre, ListNode cur) {
             // 反转完成则直接返回
             if (cur == null) return pre;
             // 保存当前节点的下一个节点

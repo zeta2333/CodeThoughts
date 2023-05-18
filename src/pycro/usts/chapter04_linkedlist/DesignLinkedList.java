@@ -1,5 +1,8 @@
 package pycro.usts.chapter04_linkedlist;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author Pycro
  * @version 1.0
@@ -7,6 +10,21 @@ package pycro.usts.chapter04_linkedlist;
  * Leetcode：707
  */
 public class DesignLinkedList {
+    public static void main(String[] args) {
+        MyLinkedList list = new MyLinkedList();
+        list.addAtTail(1);
+        list.addAtTail(1);
+        list.addAtTail(1);
+        list.addAtTail(1);
+        list.addAtTail(1);
+        Set<Node> visited = new HashSet<>();
+        Node cur = list.dummyHead;
+        while (cur.next != null) {
+            cur = cur.next;
+            visited.add(cur);
+        }
+        System.out.println(visited.size());
+    }
 }
 
 class Node {
@@ -26,6 +44,7 @@ class Node {
     }
 }
 
+// 练习链表的基本操作
 class MyLinkedList {
     int size; // 链表长度
     Node dummyHead;// 虚拟头结点
