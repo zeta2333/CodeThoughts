@@ -24,6 +24,7 @@ public class IntersectionOfTwoArrays {
         }
 
         public int[] getIntersection(Set<Integer> set1, Set<Integer> set2) {
+            // 求交集：retainAll()
             if (set1.size() > set2.size()) {
                 return getIntersection(set2, set1);
             }
