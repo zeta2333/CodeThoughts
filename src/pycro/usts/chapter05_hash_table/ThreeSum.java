@@ -1,40 +1,42 @@
 package pycro.usts.chapter05_hash_table;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Pycro
  * @version 1.0
  * 2023-05-19 5:09 PM
+ * Leetcode：15
  */
 public class ThreeSum {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 3);
+    }
+
     // 排序+双指针
     class Solution1 {
         public List<List<Integer>> threeSum(int[] nums) {
-            Arrays.sort(nums);
-            List<List<Integer>> ans = new ArrayList<>();
             int n = nums.length;
-            for (int first = 0; first < n; ++first) {
-                if (first > 0 && nums[first] == nums[first - 1]) continue; // 重复则跳过
-
-                int third = n - 1;
-                int target = -nums[first];
-
-                for (int second = first + 1; second < n; ++second) {
-                    if (second > first + 1 && nums[second] == nums[second - 1]) continue; // 重复则跳过
-
-                    while (second < third && nums[second] + nums[third] > target) --third; // 大于0则右侧往左
-
-                    if (second == third) break; // 相等时跳出循环
-
-                    if (nums[second] + nums[third] == target) {
-                        ans.add(Arrays.asList(nums[first], nums[second], nums[third]));
+            Arrays.sort(nums);// 排序(重要)，去重的重要步骤
+            List<List<Integer>> res = new ArrayList<>();
+            for (int i = 0; i < n; i++) {
+                // 与前面元素重复则跳过当次循环
+                if (i > 0 && nums[i] == nums[i - 1]) continue;
+                int k = n - 1; // 第3个从数组末尾开始往左寻找
+                for (int j = i + 1; j < n; j++) {
+                    // 与前面元素重复则跳过当次循环
+                    if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+                    // 当j在k左侧且三数之和大于0时，往左移动k
+                    while (j < k && nums[i] + nums[j] + nums[k] > 0) k--;
+                    // 如果由于j和k重合而跳出循环，则表示后续没有符合条件的元素，直接终止循环
+                    if (j == k) break;
+                    // 如果当前三数之和为0，则加入返回数组中
+                    if (nums[i] + nums[j] + nums[k] == 0) {
+                        res.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     }
                 }
             }
-            return ans;
+            return res;
         }
     }
 }
