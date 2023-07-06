@@ -1,4 +1,4 @@
-package pycro.usts.chapter06_string;
+package usts.pycro.chapter06_string;
 
 /**
  * @author Pycro
@@ -7,9 +7,9 @@ package pycro.usts.chapter06_string;
  */
 public class Reverse {
     public static void main(String[] args) {
-        String s = "a good   example";
-        System.out.println(Solution1.reverseWords(s));
+
     }
+
 
     // 拆分，反转，合并
     class Solution1 {

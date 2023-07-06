@@ -1,6 +1,6 @@
-package pycro.usts.chapter02_performance_analysis;
+package usts.pycro.chapter02_performance_analysis;
 
-import pycro.usts.util.FuncUtil;
+import usts.pycro.util.FuncUtil;
 
 /**
  * @author Pycro

@@ -1,4 +1,4 @@
-package pycro.usts.util;
+package usts.pycro.util;
 
 import java.util.function.Consumer;
 

@@ -1,4 +1,4 @@
-package pycro.usts.chapter06_string;
+package usts.pycro.chapter06_string;
 
 /**
  * @author Pycro

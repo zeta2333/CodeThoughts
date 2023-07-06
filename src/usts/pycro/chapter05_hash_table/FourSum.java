@@ -1,4 +1,4 @@
-package pycro.usts.chapter05_hash_table;
+package usts.pycro.chapter05_hash_table;
 
 import java.util.ArrayList;
 import java.util.Arrays;

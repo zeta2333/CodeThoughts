@@ -1,4 +1,4 @@
-package pycro.usts.chapter04_linkedlist;
+package usts.pycro.chapter04_linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;

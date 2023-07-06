@@ -1,4 +1,4 @@
-package pycro.usts.chapter03_array;
+package usts.pycro.chapter03_array;
 
 import java.util.Arrays;
 
